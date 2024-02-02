@@ -1,10 +1,8 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCount } from "../counterSlice";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
+  
 
   return (
     <>
@@ -87,19 +85,21 @@ export default function SignUp() {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                Sign Up
               </button>
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Alredy Member ? {" "}
-            <a
-              href="#"
-              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            <Link to="/login">
+            <div
+              
+              className="inline font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Login Your Account
-            </a>
+            </div>
+            </Link>
           </p>
         </div>
       </div>

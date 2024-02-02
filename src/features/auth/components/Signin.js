@@ -1,10 +1,10 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCount } from "../counterSlice";
+
+
+import { Link } from "react-router-dom";
 
 export default function SignIn() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
+ 
 
   return (
     <>
@@ -50,12 +50,12 @@ export default function SignIn() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a
-                    href="#"
+                  <p
+                    
                     className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
-                  </a>
+                  </p>
                 </div>
               </div>
               <div className="mt-2">
@@ -75,19 +75,21 @@ export default function SignIn() {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                Log In
               </button>
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not SignUp ? {" "}
-            <a
-              href="#"
-              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            <Link to="/signup">
+            <div
+              
+              className="inline font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Create an Account
-            </a>
+            </div>
+            </Link>
           </p>
         </div>
       </div>
